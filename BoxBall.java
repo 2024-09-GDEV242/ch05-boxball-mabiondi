@@ -18,7 +18,6 @@ import java.awt.geom.*;
 
 public class BoxBall
 {
-    private int ballDegradation = 2;
     private Ellipse2D.Double circle;
     private Color color;
     private int diameter;
@@ -29,6 +28,7 @@ public class BoxBall
     private final int leftPosition;
     private final int rightPosition;
     private Canvas canvas;
+    private int xSpeed = 2;
     private int ySpeed = 2;                // initial downward speed
 
     /**
@@ -82,15 +82,32 @@ public class BoxBall
         erase();
             
         // compute new position
+        xPosition += xSpeed;
         yPosition += ySpeed;
-        xPosition +=2;
 
-        // check if it has hit the ground
+        // if hits the ground
         if (yPosition >= (groundPosition - diameter) && ySpeed > 0) {
             yPosition = (int)(groundPosition - diameter);
-            ySpeed = -ySpeed + ballDegradation; 
+            ySpeed = -ySpeed; 
         }
-
+        
+        // if hits the ceiling
+        if (yPosition <= (topPosition + diameter) && ySpeed > 0) {
+            yPosition = (int)(topPosition + diameter);
+            ySpeed = -ySpeed;
+        }
+        
+        // if hits the left wall
+        if (xPosition <= (leftPosition - diameter) && xSpeed > 0) {
+            xPosition = (int)(leftPosition - diameter);
+            xSpeed = -xSpeed; 
+        }
+        
+        // if hits the right wall
+        if (xPosition >= (rightPosition + diameter) && xSpeed > 0) {
+            xPosition = (int)(rightPosition + diameter);
+            xSpeed = -xSpeed; 
+        }
         // draw again at new position
         draw();
     }    
