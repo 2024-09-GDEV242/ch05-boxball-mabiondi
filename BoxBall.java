@@ -18,8 +18,6 @@ import java.awt.geom.*;
 
 public class BoxBall
 {
-    private static final int GRAVITY = 3;  // effect of gravity
-
     private int ballDegradation = 2;
     private Ellipse2D.Double circle;
     private Color color;
@@ -77,7 +75,6 @@ public class BoxBall
         erase();
             
         // compute new position
-        ySpeed += GRAVITY;
         yPosition += ySpeed;
         xPosition +=2;
 
