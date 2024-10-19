@@ -55,6 +55,9 @@ public class BallDemo
     public void boxBounce()
     {
         int ground = 400;   // position of the ground line
+        int top = 100;
+        int left = 100;
+        int right = 400;
 
         myCanvas.setVisible(true);
 
@@ -63,9 +66,9 @@ public class BallDemo
         myCanvas.drawLine(50, ground, 550, ground);
 
         // create and show the balls
-        BoxBall ball = new BoxBall(50, 50, 16, Color.BLUE, ground, myCanvas);
+        BoxBall ball = new BoxBall(50, 50, 16, Color.BLUE, ground, top, left, right, myCanvas);
         ball.draw();
-        BoxBall ball2 = new BoxBall(70, 80, 20, Color.RED, ground, myCanvas);
+        BoxBall ball2 = new BoxBall(70, 80, 20, Color.RED, ground, top, left, right, myCanvas);
         ball2.draw();
 
         while (true) {
