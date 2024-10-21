@@ -73,7 +73,9 @@ public class BallDemo
         drawBox(ground, top, left, right);
 
         // create and show the balls
-        BoxBall ball = new BoxBall(150, 150, 16, Color.BLUE, ground, top, left, right, myCanvas);
+        BoxBall ball = new BoxBall(150, 150, 16, Color.BLUE,
+                                    ground, top, left, right,
+                                    myCanvas);
         ball.draw();
 
         while (true) {
