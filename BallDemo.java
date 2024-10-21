@@ -53,7 +53,7 @@ public class BallDemo
         }
     }
     
-    public void boxBounce()
+    public void boxBounce(int balls)
     {
         // positions of the walls
         int ground = 400;
@@ -70,13 +70,10 @@ public class BallDemo
         // create and show the balls
         BoxBall ball = new BoxBall(150, 150, 16, Color.BLUE, ground, top, left, right, myCanvas);
         ball.draw();
-        BoxBall ball2 = new BoxBall(170, 180, 20, Color.RED, ground, top, left, right, myCanvas);
-        ball2.draw();
 
         while (true) {
             myCanvas.wait(50);           // small delay
             ball.move();
-            ball2.move();
         }
     }
     
