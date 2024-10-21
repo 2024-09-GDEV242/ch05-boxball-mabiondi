@@ -53,6 +53,11 @@ public class BallDemo
         }
     }
     
+    /**
+     * Simulate a user-specified number of balls bouncing inside a box
+     * 
+     * @param balls The number of balls in the simulation
+     */
     public void boxBounce(int balls)
     {
         // positions of the walls
