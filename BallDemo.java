@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.util.Random;
 
 /**
  * Class BallDemo - Two short demonstrations showing animation with the 
@@ -77,6 +78,7 @@ public class BallDemo
         for(int i = 0; i < balls.length; i++) {
             balls[i] = new BoxBall(150, 150, 16, Color.BLUE,
                                     ground, top, left, right,
+                                    5, 5,
                                     myCanvas);
             balls[i].draw();
         }

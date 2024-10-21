@@ -28,8 +28,8 @@ public class BoxBall
     private final int leftPosition;
     private final int rightPosition;
     private Canvas canvas;
-    private int xSpeed = 5;
-    private int ySpeed = 5;                // initial downward speed
+    private int xSpeed;
+    private int ySpeed;                // initial downward speed
 
     /**
      * Constructor for objects of class BoxBall
@@ -43,6 +43,7 @@ public class BoxBall
      */
     public BoxBall(int xPos, int yPos, int ballDiameter, Color ballColor,
                         int groundPos, int topPos, int leftPos, int rightPos,
+                        int xSpeed, int ySpeed,
                         Canvas drawingCanvas)
     {
         xPosition = xPos;
