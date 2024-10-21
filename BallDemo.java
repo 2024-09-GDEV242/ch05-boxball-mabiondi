@@ -58,7 +58,7 @@ public class BallDemo
      * 
      * @param balls The number of balls in the simulation
      */
-    public void boxBounce(int balls)
+    public void boxBounce(int numOfBalls)
     {
         // positions of the walls
         int ground = 400;
@@ -73,6 +73,7 @@ public class BallDemo
         drawBox(ground, top, left, right);
 
         // create and show the balls
+        BoxBall[] balls = new BoxBall[numOfBalls];
         BoxBall ball = new BoxBall(150, 150, 16, Color.BLUE,
                                     ground, top, left, right,
                                     myCanvas);
