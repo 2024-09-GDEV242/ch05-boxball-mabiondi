@@ -92,20 +92,20 @@ public class BoxBall
         }
         
         // if hits the ceiling
-        if (yPosition <= (topPosition + diameter) && ySpeed < 0) {
-            yPosition = (int)(topPosition + diameter);
+        if (yPosition <= (topPosition) && ySpeed < 0) {
+            yPosition = (int)(topPosition);
             ySpeed = -ySpeed;
         }
         
         // if hits the left wall
-        if (xPosition <= (leftPosition - diameter) && xSpeed < 0) {
-            xPosition = (int)(leftPosition - diameter);
+        if (xPosition <= (leftPosition) && xSpeed < 0) {
+            xPosition = (int)(leftPosition);
             xSpeed = -xSpeed; 
         }
         
         // if hits the right wall
-        if (xPosition >= (rightPosition + diameter) && xSpeed > 0) {
-            xPosition = (int)(rightPosition + diameter);
+        if (xPosition >= (rightPosition - diameter) && xSpeed > 0) {
+            xPosition = (int)(rightPosition - diameter);
             xSpeed = -xSpeed; 
         }
         // draw again at new position
