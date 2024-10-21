@@ -13,6 +13,7 @@ import java.util.Random;
 public class BallDemo   
 {
     private Canvas myCanvas;
+    private Random random = new Random();
 
     /**
      * Create a BallDemo object. Creates a fresh canvas and makes it visible.
@@ -78,7 +79,7 @@ public class BallDemo
         for(int i = 0; i < balls.length; i++) {
             balls[i] = new BoxBall(150, 150, 16, Color.BLUE,
                                     ground, top, left, right,
-                                    5, 5,
+                                    speed(), speed(),
                                     myCanvas);
             balls[i].draw();
         }
@@ -105,5 +106,13 @@ public class BallDemo
         myCanvas.drawLine(right, ground, right, top); // right
         myCanvas.drawLine(left, top, right, top); // top
         myCanvas.drawLine(left, top, left, ground); // left
+    }
+    
+    private int speed() {
+        int speed;
+        do {
+            speed = (random.nextInt(2) - 1) * (random.nextInt(11) - 5);
+        } while(speed == 0);
+        return speed;
     }
 }

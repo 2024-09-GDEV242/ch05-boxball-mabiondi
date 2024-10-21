@@ -43,7 +43,7 @@ public class BoxBall
      */
     public BoxBall(int xPos, int yPos, int ballDiameter, Color ballColor,
                         int groundPos, int topPos, int leftPos, int rightPos,
-                        int xSpeed, int ySpeed,
+                        int xSpd, int ySpd,
                         Canvas drawingCanvas)
     {
         xPosition = xPos;
@@ -54,6 +54,8 @@ public class BoxBall
         topPosition = topPos;
         leftPosition = leftPos;
         rightPosition = rightPos;
+        xSpeed = xSpd;
+        ySpeed = ySpd;
         canvas = drawingCanvas;
     }
 
