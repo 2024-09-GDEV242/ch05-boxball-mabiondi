@@ -74,14 +74,18 @@ public class BallDemo
 
         // create and show the balls
         BoxBall[] balls = new BoxBall[numOfBalls];
-        BoxBall ball = new BoxBall(150, 150, 16, Color.BLUE,
+        for(BoxBall ball : balls) {
+            ball = new BoxBall(150, 150, 16, Color.BLUE,
                                     ground, top, left, right,
                                     myCanvas);
-        ball.draw();
+            ball.draw();
+        }
 
         while (true) {
             myCanvas.wait(50);           // small delay
-            ball.move();
+            for(BoxBall ball : balls) {
+                ball.move();
+            }
         }
     }
     
