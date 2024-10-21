@@ -5,7 +5,8 @@ import java.awt.Color;
  * Canvas class.
  *
  * @author Michael Kölling and David J. Barnes
- * @version 2016.02.29
+ * @author Michael Biondi
+ * @version 2024.10.20
  */
 
 public class BallDemo   
