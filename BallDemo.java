@@ -87,9 +87,9 @@ public class BallDemo
      */
     private void drawBox(int ground, int top, int left, int right)
     {
-        myCanvas.drawLine(left, ground, right, ground);
-        myCanvas.drawLine(right, ground, right, top);
-        myCanvas.drawLine(left, top, right, top);
-        myCanvas.drawLine(left, ground, right, ground);
+        myCanvas.drawLine(left, ground, right, ground); // bottom
+        myCanvas.drawLine(right, ground, right, top); // right
+        myCanvas.drawLine(left, top, right, top); // top
+        myCanvas.drawLine(left, top, left, ground); // left
     }
 }
