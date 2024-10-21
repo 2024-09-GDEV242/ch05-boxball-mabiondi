@@ -1,8 +1,8 @@
 import java.awt.Color;
 
 /**
- * Class BallDemo - a short demonstration showing animation with the 
- * Canvas class. 
+ * Class BallDemo - Two short demonstrations showing animation with the 
+ * Canvas class.
  *
  * @author Michael Kölling and David J. Barnes
  * @version 2016.02.29
@@ -54,16 +54,17 @@ public class BallDemo
     
     public void boxBounce()
     {
-        int ground = 400;   // position of the ground line
+        // positions of the walls
+        int ground = 400;
         int top = 100;
         int left = 100;
         int right = 400;
 
         myCanvas.setVisible(true);
 
-        // draw the ground
+        // draw the walls
         myCanvas.setForegroundColor(Color.BLACK);
-        myCanvas.drawLine(50, ground, 550, ground);
+        drawBox(ground, top, left, right);
 
         // create and show the balls
         BoxBall ball = new BoxBall(150, 150, 16, Color.BLUE, ground, top, left, right, myCanvas);
@@ -76,5 +77,21 @@ public class BallDemo
             ball.move();
             ball2.move();
         }
+    }
+    
+    /**
+     * Draw a rectangle on the canvas
+     * 
+     * @param ground The y-coord of the bottom line
+     * @param top The y-coord of the top line
+     * @param left The x-coord of the left line
+     * @param right The x-coord of the right line
+     */
+    private void drawBox(int ground, int top, int left, int right)
+    {
+        myCanvas.drawLine(left, ground, right, ground);
+        myCanvas.drawLine(right, ground, right, top);
+        myCanvas.drawLine(left, top, right, top);
+        myCanvas.drawLine(left, ground, right, ground);
     }
 }
