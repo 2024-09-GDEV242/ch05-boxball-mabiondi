@@ -77,7 +77,12 @@ public class BallDemo
         // create and show the balls
         BoxBall[] balls = new BoxBall[numOfBalls];
         for(int i = 0; i < balls.length; i++) {
-            balls[i] = new BoxBall(150, 150, 16, Color.BLUE,
+            balls[i] = new BoxBall(150, 150, 16,
+            
+                                    new Color(random.nextInt(200),
+                                    random.nextInt(200),
+                                    random.nextInt(200)),
+                                    
                                     ground, top, left, right,
                                     speed(), speed(),
                                     myCanvas);
