@@ -72,7 +72,7 @@ public class BallDemo
 
         // draw the walls
         myCanvas.setForegroundColor(Color.BLACK);
-        drawBox(ground, top, left, right);
+        drawRectangle(ground, top, left, right);
 
         // create and show the balls
         BoxBall[] balls = new BoxBall[numOfBalls];
@@ -100,7 +100,7 @@ public class BallDemo
      * @param left The x-coord of the left line
      * @param right The x-coord of the right line
      */
-    private void drawBox(int ground, int top, int left, int right)
+    private void drawRectangle(int ground, int top, int left, int right)
     {
         myCanvas.drawLine(left, ground, right, ground); // bottom
         myCanvas.drawLine(right, ground, right, top); // right
