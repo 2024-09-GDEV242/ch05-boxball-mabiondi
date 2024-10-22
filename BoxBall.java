@@ -37,7 +37,10 @@ public class BoxBall
      * @param yPos  the vertical coordinate of the ball
      * @param ballDiameter  the diameter (in pixels) of the ball
      * @param ballColor  the color of the ball
-     * @param groundPos  the position of the ground (where the wall will bounce)
+     * @param groundPos  the position of the bottom wall
+     * @param topPos the position of the top wall
+     * @param leftPos  the position of the left wall
+     * @param rightPos  the position of the right wall
      * @param drawingCanvas  the canvas to draw this ball on
      */
     public BoxBall(int xPos, int yPos, int ballDiameter, Color ballColor,
