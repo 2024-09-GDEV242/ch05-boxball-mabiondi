@@ -7,7 +7,7 @@ import java.util.Random;
  *
  * @author Michael Kölling and David J. Barnes
  * @author Michael Biondi
- * @version 2024.10.20
+ * @version 2024.10.22
  */
 
 public class BallDemo   
