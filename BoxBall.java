@@ -41,6 +41,8 @@ public class BoxBall
      * @param topPos the position of the top wall
      * @param leftPos  the position of the left wall
      * @param rightPos  the position of the right wall
+     * @param xSpd the horizontal speed of the ball
+     * @param ySpd the vertical speed of the ball
      * @param drawingCanvas  the canvas to draw this ball on
      */
     public BoxBall(int xPos, int yPos, int ballDiameter, Color ballColor,
