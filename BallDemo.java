@@ -113,6 +113,11 @@ public class BallDemo
         myCanvas.drawLine(left, top, left, ground); // left
     }
     
+    /**
+     * Returns the value to be used for the X or Y speed of a ball.
+     * 
+     * @return A random int between -5 and 5 (inclusive), but never 0
+     */
     private int speed() {
         int speed;
         do {
