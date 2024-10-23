@@ -106,7 +106,7 @@ public class BoxBall
         
         // if hits the left wall
         if (xPosition <= (leftPosition) && xSpeed < 0) {
-            xPosition = (int)(leftPosition);
+            xPosition = (int)(leftPosition) + 1;
             xSpeed = -xSpeed; 
         }
         
